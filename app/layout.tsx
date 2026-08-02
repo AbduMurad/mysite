@@ -37,6 +37,21 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "Abdu Murad",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Abdu Murad — Full-stack engineer. From the interface to the infrastructure.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abdu Murad — Full-Stack Engineer",
+    description:
+      "Full-stack engineer. From the interface to the infrastructure.",
+    images: ["/og.png"],
   },
 };
 
