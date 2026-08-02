@@ -1,0 +1,65 @@
+import type { Metadata } from "next";
+import { Instrument_Serif, Inter, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import CommandPalette from "@/components/CommandPalette";
+import ConsoleEgg from "@/components/ConsoleEgg";
+import { site } from "@/data/site";
+
+const serif = Instrument_Serif({
+  weight: "400",
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-instrument-serif",
+  display: "swap",
+});
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+const mono = JetBrains_Mono({
+  weight: ["400", "500"],
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(site.domain),
+  title: {
+    default: "Abdu Murad — Full-Stack Engineer",
+    template: "%s — Abdu Murad",
+  },
+  description:
+    "Full-stack engineer. From the interface to the infrastructure.",
+  openGraph: {
+    siteName: "Abdu Murad",
+    type: "website",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html
+      lang="en"
+      className={`${serif.variable} ${inter.variable} ${mono.variable}`}
+    >
+      <body>
+        <a className="skip" href="#main">
+          Skip to content
+        </a>
+        <Nav />
+        {children}
+        <Footer />
+        <CommandPalette />
+        <ConsoleEgg />
+      </body>
+    </html>
+  );
+}
