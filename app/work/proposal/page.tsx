@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Accent from "@/components/Accent";
 import Reveal from "@/components/Reveal";
 import { PrevNext } from "@/components/Shared";
 
@@ -13,7 +12,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main id="main">
-      <Accent color="#14B8A6" muted="rgba(20,184,166,.12)" />
       <style>{`
 /* TTL ring on the cache chip */
 .ttl{fill:none;stroke:var(--accent);stroke-width:2;stroke-dasharray:126 42;opacity:.8}

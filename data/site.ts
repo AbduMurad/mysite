@@ -62,7 +62,7 @@ export const projects: ProjectMeta[] = [
     slug: "v1-v2",
     title: "Rebuilding a Platform, v1 to v2",
     short: "Platform v1 → v2",
-    tagline: "What seven services taught me that the first architecture couldn't.",
+    tagline: "Seven services rebuilt around the right boundaries — both architectures mine.",
     accent: "#8957E5",
     accentMuted: A("#8957E5"),
     live: false,

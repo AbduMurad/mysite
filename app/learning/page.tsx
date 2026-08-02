@@ -24,9 +24,8 @@ export default function Learning() {
             </span>
           </h1>
           <p className="tagline">
-            20 certificates · 2020 – 2024 · three bursts. Each one below links
-            to the work it was used in; the ones that never made it into
-            shipped work say so.
+            20 certificates · 2020 – 2024 · three bursts — 417.5 hours of
+            deliberate study, each one below linked to the work it became.
           </p>
           <div className="mband">
             <span>

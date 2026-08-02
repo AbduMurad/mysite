@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Accent from "@/components/Accent";
 import Reveal from "@/components/Reveal";
 import { PrevNext } from "@/components/Shared";
 
@@ -13,7 +12,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main id="main">
-      <Accent color="#E8483A" muted="rgba(232,72,58,.12)" />
       <style>{`
 /* app frame — screenshots */
 .appframe{background:var(--bg-raised);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md)}

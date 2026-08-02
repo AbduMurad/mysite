@@ -2,6 +2,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import Topology from "@/components/Topology";
 import LogoFan from "@/components/LogoFan";
+import ParticlePortrait from "@/components/ParticlePortrait";
 import { site } from "@/data/site";
 /* Copy is the contract — mirrors the pack; voice rules apply. */
 
@@ -17,7 +18,7 @@ type CardData = {
   chips: string[];
   status: string;
   live: boolean;
-  accent: string;
+  metric: { n: string; cap: string };
   fan?: { slug: string; title: string }[];
 };
 
@@ -32,7 +33,7 @@ const cards: CardData[] = [
     chips: ["Proxmox", "ERPNext", "Asterisk", "Dokploy", "+8"],
     status: "In production — current role",
     live: true,
-    accent: "#2DA44E",
+    metric: { n: "08", cap: "self-hosted services in production" },
     fan: [
       { slug: "proxmox", title: "Proxmox" },
       { slug: "frappe", title: "Frappe" },
@@ -50,7 +51,7 @@ const cards: CardData[] = [
     chips: ["NestJS", "Vertex AI", "Gemini", "GCS", "+3"],
     status: "Delivered — late 2025",
     live: false,
-    accent: "#14B8A6",
+    metric: { n: "RFP→draft", cap: "grounded in the documents that won before" },
     fan: [
       { slug: "googlegemini", title: "Gemini" },
       { slug: "googlecloud", title: "Google Cloud" },
@@ -62,12 +63,12 @@ const cards: CardData[] = [
     idx: "04",
     slug: "v1-v2",
     title: "Rebuilding a Platform, v1 to v2",
-    blurb: "What seven services taught me that the first architecture couldn't.",
+    blurb: "Seven services rebuilt around the right boundaries — both architectures mine.",
     meta: "Architect, both generations · 2022–2026",
     chips: ["NestJS", "NATS", "Kubernetes", "MongoDB", "+6"],
     status: "v2 architecturally complete",
     live: false,
-    accent: "#8957E5",
+    metric: { n: "×2", cap: "architectural generations, one architect" },
     fan: [
       { slug: "kubernetes", title: "Kubernetes" },
       { slug: "nestjs", title: "NestJS" },
@@ -85,7 +86,7 @@ const cards: CardData[] = [
     chips: ["Antivirus scanning", "MinIO", "NATS", "NestJS", "+5"],
     status: "Built — not deployed",
     live: false,
-    accent: "#D29922",
+    metric: { n: "scan→store", cap: "every upload gated before it lands" },
     fan: [
       { slug: "minio", title: "MinIO" },
       { slug: "amazons3", title: "Amazon S3" },
@@ -103,7 +104,7 @@ const cards: CardData[] = [
     chips: ["NestJS", "Angular", "MySQL", "ZKTeco", "+4"],
     status: "In production — 2026",
     live: true,
-    accent: "#388BFD",
+    metric: { n: "2026", cap: "in production, actively developed" },
     fan: [
       { slug: "angular", title: "Angular" },
       { slug: "mysql", title: "MySQL" },
@@ -116,36 +117,38 @@ const cards: CardData[] = [
 export default function Home() {
   return (
     <main id="main" className="home">
-      {/* 1 · hero */}
+      {/* 1 · hero — name as display, particle portrait right */}
       <section className="hero" id="top">
         <div className="hero-mesh" aria-hidden="true" />
+        <ParticlePortrait />
         <div className="wrap">
-          <p className="eyebrow">
-            <span className="dot" aria-hidden="true" /> Open to opportunities
+          <p className="microrow">
+            <span className="dot" aria-hidden="true" />
+            <span>Open for opportunities</span>
+            <span>Remote · UTC+2</span>
           </p>
           <h1>
             <span className="line">
-              <span>Full-stack engineer.</span>
+              <span>Abdu</span>
             </span>
-            <span className="line">
-              <span>From the interface</span>
-            </span>
-            <span className="line">
-              <span>to the infrastructure.</span>
+            <span className="line dim">
+              <span>Murad</span>
             </span>
           </h1>
+          <p className="hero-value">
+            Full-stack engineer — from the interface to the infrastructure.
+          </p>
           <p className="hero-sub">
-            I build interfaces people use, architect the containerized
+            I build the interfaces people use, architect the containerized
             microservices behind them, and keep{" "}
-            <strong>production infrastructure</strong> running. The specifics
-            are in the work below.
+            <strong>production infrastructure</strong> running.
           </p>
           <div className="cta-pair">
             <a className="btn btn-primary" href="#work">
-              See the work ↓
+              View work
             </a>
             <a className="btn btn-ghost" href="#contact">
-              Get in touch →
+              Get in touch
             </a>
           </div>
         </div>
@@ -160,11 +163,7 @@ export default function Home() {
           </Reveal>
           <div className="grid">
             <Reveal className="span-all">
-              <Link
-                className="card card-feature"
-                style={{ "--card-accent": "#E8483A" } as React.CSSProperties}
-                href="/work/isms/"
-              >
+              <Link className="card card-feature" href="/work/isms/">
                 <div className="cf-text">
                   <span className="card-idx">01 — flagship</span>
                   <h3>ISMS Compliance Platform</h3>
@@ -172,6 +171,10 @@ export default function Home() {
                     Multi-tenant SaaS that takes organizations through
                     information-security certification — ISO 27001 and beyond.
                   </p>
+                  <span className="bmetric">
+                    <b>07</b>
+                    <span>services on one event bus</span>
+                  </span>
                   <span className="card-meta">
                     Architect & lead engineer · 2022–2026 · client since 2020
                   </span>
@@ -197,17 +200,17 @@ export default function Home() {
             </Reveal>
             {cards.map((c, i) => (
               <Reveal key={c.slug} delay={0.05 * (i % 2)}>
-                <Link
-                  className="card"
-                  style={{ "--card-accent": c.accent } as React.CSSProperties}
-                  href={`/work/${c.slug}/`}
-                >
+                <Link className="card" href={`/work/${c.slug}/`}>
                   <div className="card-top">
                     <span className="card-idx">{c.idx}</span>
                     {c.fan && <LogoFan marks={c.fan} />}
                   </div>
                   <h3>{c.title}</h3>
                   <p>{c.blurb}</p>
+                  <span className="bmetric">
+                    <b>{c.metric.n}</b>
+                    <span>{c.metric.cap}</span>
+                  </span>
                   <span className="card-meta">{c.meta}</span>
                   <ul className="chips">
                     {c.chips.map((ch) => (

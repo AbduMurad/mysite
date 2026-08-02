@@ -1,14 +1,6 @@
-/** Per-page accent — server component emitting a style tag after the global
- *  sheet, so var(--accent)/var(--accent-muted) cascade site-wide for the route.
- *  One accent per viewport (design-system rule) — pages set exactly one. */
-export default function Accent({
-  color,
-  muted,
-}: {
-  color: string;
-  muted: string;
-}) {
-  return (
-    <style>{`:root{--accent:${color};--accent-muted:${muted}}`}</style>
-  );
+/** RETIRED (plan 09, 30 Jul 2026): the per-page accent system — including the
+ *  fixed ISMS red — was superseded by the single champagne accent in @theme.
+ *  Do not re-import this component; page accents are gone by design. */
+export default function Accent(_props: { color: string; muted: string }) {
+  return null;
 }

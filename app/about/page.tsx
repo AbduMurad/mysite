@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Accent from "@/components/Accent";
 import Reveal from "@/components/Reveal";
 import { site } from "@/data/site";
 
@@ -28,7 +27,6 @@ const personLd = {
 export default function About() {
   return (
     <main id="main">
-      <Accent color="#E8483A" muted="rgba(232,72,58,.12)" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
@@ -40,7 +38,7 @@ export default function About() {
           <p className="eyebrow">About</p>
           <div className="bio-grid" style={{ marginTop: "var(--space-12)" }}>
             <h1 className="bio-open">
-              I&apos;ve been writing code for about ten years.
+              I architect platforms and keep production running.
             </h1>
             <figure className="portrait">
               <div className="portrait-glow" aria-hidden="true" />
@@ -63,9 +61,9 @@ export default function About() {
               style={{ margin: "var(--space-8) 0 0" }}
             >
               <p>
-                The first five were course projects — nothing in production. I
-                started getting paid in 2020, and that&apos;s where the
-                certificate trail starts too.
+                Ten years of writing code, six of them paid. The paid years
+                start in 2020 — and that&apos;s where the certificate trail
+                starts too.
               </p>
               <p>
                 Most of that paid work has been on a compliance platform for ISO
@@ -75,15 +73,14 @@ export default function About() {
                 lived with both decisions since.
               </p>
               <p>
-                That&apos;s taught me more than any single stack would.
-                I&apos;ve built the wrong service boundaries and then rebuilt
-                them correctly. I&apos;ve run an agent-assisted
+                Seven services across two architectural generations — I
+                designed both, and the second corrected the first&apos;s
+                boundaries. I&apos;ve run an agent-assisted
                 production-readiness audit across all seven services, measuring
-                my development environment against production standards — the
-                kind of gaps that are easy to create and hard to catch by
-                reading. And I&apos;ve cut a Docker build from two minutes to
-                just over a second — small, until you multiply it by every
-                build a team runs.
+                my development environment against production standards. And
+                I&apos;ve cut a Docker build from two minutes to just over a
+                second — small, until you multiply it by every build a team
+                runs.
               </p>
               <p>
                 Currently I run the technology stack for a humanitarian NGO — a
@@ -143,8 +140,9 @@ export default function About() {
             </div>
 
             <Reveal className="tentry now">
+              <span className="tnum">05</span>
               <span className="twhen">Mid-2024 — present</span>
-              <h3>Humanitarian NGO — technical owner</h3>
+              <h3>Technical owner of a production estate</h3>
               <p>
                 Architecture, build and operations for the organization&apos;s
                 technology stack —{" "}
@@ -159,6 +157,7 @@ export default function About() {
             </Reveal>
 
             <Reveal className="tentry">
+              <span className="tnum">04</span>
               <span className="twhen">Mar — Jun 2024</span>
               <h3>Bank — internal systems</h3>
               <p>
@@ -169,8 +168,9 @@ export default function About() {
             </Reveal>
 
             <Reveal className="tentry">
+              <span className="tnum">03</span>
               <span className="twhen">2022 — 2026</span>
-              <h3>The platform years</h3>
+              <h3>Two architectural generations</h3>
               <p>
                 Architected and built{" "}
                 <Link href="/work/isms/">
@@ -190,8 +190,9 @@ export default function About() {
             </Reveal>
 
             <Reveal className="tentry">
+              <span className="tnum">02</span>
               <span className="twhen">2020 — 2021</span>
-              <h3>First paid work</h3>
+              <h3>First shipped work</h3>
               <p>
                 A company website for a regional information-security
                 consultancy. They kept coming back for six years — the
@@ -201,11 +202,13 @@ export default function About() {
             </Reveal>
 
             <Reveal className="tentry">
+              <span className="tnum">01</span>
               <span className="twhen">~2015</span>
-              <h3>Self-taught beginnings</h3>
+              <h3>Foundations</h3>
               <p>
-                YouTube, courses, some university study. Five years of learning
-                projects before anything shipped.
+                Self-taught by design — courses, university study, and five
+                years of projects that built the base everything since stands
+                on.
               </p>
             </Reveal>
           </div>

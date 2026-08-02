@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Accent from "@/components/Accent";
 import Reveal from "@/components/Reveal";
 import { PrevNext } from "@/components/Shared";
 
@@ -13,7 +12,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main id="main">
-      <Accent color="#D29922" muted="rgba(210,153,34,.12)" />
       <style>{`
 /* the rejection is the only red on the page */
 .reject{fill:rgba(218,54,51,.12);stroke:#DA3633}

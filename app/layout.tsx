@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Inter, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Geist, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -7,16 +7,15 @@ import CommandPalette from "@/components/CommandPalette";
 import ConsoleEgg from "@/components/ConsoleEgg";
 import { site } from "@/data/site";
 
-const serif = Instrument_Serif({
-  weight: "400",
-  style: ["normal", "italic"],
+const serif = Fraunces({
   subsets: ["latin"],
-  variable: "--font-instrument-serif",
+  variable: "--font-fraunces",
+  axes: ["opsz"],
   display: "swap",
 });
-const inter = Inter({
+const sans = Geist({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-geist",
   display: "swap",
 });
 const mono = JetBrains_Mono({
@@ -63,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${serif.variable} ${inter.variable} ${mono.variable}`}
+      className={`${serif.variable} ${sans.variable} ${mono.variable}`}
     >
       <body>
         <a className="skip" href="#main">

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Accent from "@/components/Accent";
 import Reveal from "@/components/Reveal";
 import { PrevNext } from "@/components/Shared";
 
@@ -13,7 +12,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main id="main">
-      <Accent color="#2DA44E" muted="rgba(45,164,78,.12)" />
       <style>{`
 /* rack diagram specifics */
 .rack .svc{fill:var(--bg-overlay);stroke:var(--border-strong)}

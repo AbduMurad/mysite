@@ -1,19 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Accent from "@/components/Accent";
 import Reveal from "@/components/Reveal";
 import { PrevNext } from "@/components/Shared";
 
 export const metadata: Metadata = {
   title: "Rebuilding a Platform, v1 to v2",
   description:
-    "What seven services taught me that the first architecture couldn't.",
+    "Seven services rebuilt around the right boundaries — both architectures mine.",
 };
 
 export default function Page() {
   return (
     <main id="main">
-      <Accent color="#8957E5" muted="rgba(137,87,229,.12)" />
       <style>{`
 /* v1 nodes that merge into the v2 user domain get the accent tint (colour-matched, per motion-spec reduced-motion state) */
 .merge{fill:var(--accent-muted);stroke:var(--accent)}
@@ -25,10 +23,10 @@ export default function Page() {
           <Link className="crumb" href="/#work">← Work</Link>
           <p className="eyebrow" style={{ marginTop: "var(--space-8)" }}>Client contract · 2022 – 2026</p>
           <h1>
-            <span className="line"><span>Rebuilding a Platform,</span></span>
-            <span className="line"><span>v1 to v2</span></span>
+            <span className="line"><span>Two generations.</span></span>
+            <span className="line"><span>One architect.</span></span>
           </h1>
-          <p className="tagline">What seven services taught me that the first architecture couldn't.</p>
+          <p className="tagline">Seven services rebuilt around the right boundaries — both architectures mine.</p>
           <div className="meta">
             <span><b>ROLE</b>&nbsp; Architect and lead engineer — both generations</span>
             <span className="status"><b>STATUS</b>&nbsp;<span className="off" aria-hidden="true" /> v1 superseded — v2 architecturally complete</span>
@@ -108,7 +106,7 @@ export default function Page() {
               <p><strong>v1</strong> split services roughly per entity — auth, users, entities, projects, mail, dashboard — deployed with Skaffold against raw <code>kubectl</code> manifests, with a React/Next.js front end.</p>
               <p><strong>v2</strong> splits by bounded context instead — the user domain absorbs auth, users, organizations, permissions and subscriptions into one service that owns identity end to end; the core domain owns the entire compliance workflow; the document, analytics, ops and support domains each own a capability rather than a table. Infrastructure moved from hand-written manifests to Helmfile-managed operators (MongoDB Community Operator, Redis Operator, MinIO Operator). The front end moved to Angular.</p>
               <p><strong>Where v1's shape came from:</strong> in May 2022 I completed Stephen Grider's <em>Microservices with Node JS and React</em>, which teaches exactly this stack: Node services, NATS, Skaffold, Kubernetes, decomposed per entity. v1 is that pattern applied to a real product, months later. v2 came from living with it.</p>
-              <p>I learned the pattern from a course, applied it to a real product, and found where it stops working.</p>
+              <p>I took the pattern from a course, applied it to a real product, and mapped exactly where it stops working.</p>
               <p><strong>The lesson:</strong> v1's split followed the data model, which meant a single user-facing action fanned out across three or four services and every feature touched multiple repos. v2's split follows the <em>domain</em>, so most changes land in one service. Service boundaries drawn around entities produce distributed monoliths; boundaries drawn around business capabilities produce independently deployable systems.</p>
               <p>I only reached that conclusion by building the wrong version first.</p>
             </div>
