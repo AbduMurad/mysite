@@ -349,7 +349,7 @@ body::after {
   opacity: 0;
   translate: 0 14px;
   animation: mnavin 0.35s var(--ease-out) forwards;
-  animation-delay: inherit;
+  /* per-item stagger comes from the inline animationDelay */
 }
 @keyframes mnavin {
   to {

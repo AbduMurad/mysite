@@ -85,13 +85,13 @@ export default function Nav() {
         <div className="mnav-overlay">
           <ul>
             {links.map((l, i) => (
-              <li key={l.label} style={{ transitionDelay: `${i * 40}ms` }}>
+              <li key={l.label} style={{ animationDelay: `${i * 40}ms` }}>
                 <Link href={l.href} onClick={() => setOpen(false)}>
                   {l.label}
                 </Link>
               </li>
             ))}
-            <li style={{ transitionDelay: "160ms" }}>
+            <li style={{ animationDelay: "160ms" }}>
               <Link href="/#contact" onClick={() => setOpen(false)}>
                 Contact
               </Link>

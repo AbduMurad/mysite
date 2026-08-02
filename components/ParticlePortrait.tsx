@@ -24,10 +24,14 @@ export default function ParticlePortrait() {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = ref.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    const el = ref.current;
+    if (!el) return;
+    const c2d = el.getContext("2d");
+    if (!c2d) return;
+    // explicitly-typed aliases — strict TS doesn't carry the null-narrowing
+    // into the nested function declarations below
+    const canvas: HTMLCanvasElement = el;
+    const ctx: CanvasRenderingContext2D = c2d;
 
     const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const fine = matchMedia("(pointer: fine)").matches;
