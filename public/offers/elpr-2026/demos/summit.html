@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Health Investment & Pharmaceutical Industries Summit — Demo</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { teal:{50:'#f0fdfa',100:'#ccfbf1',600:'#0d9488',700:'#0f766e',800:'#115e59',900:'#134e4a',950:'#042f2e'}, lime:{400:'#a3e635'} },
+  fontFamily: { sans: ['Inter','Noto Kufi Arabic','sans-serif'] }
+} } }
+</script>
+<style>
+  body{font-family:Inter,'Noto Kufi Arabic',sans-serif}
+  [dir="rtl"]{font-family:'Noto Kufi Arabic',Inter,sans-serif}
+  [data-page]{display:none}
+  [data-page].active{display:block}
+  .fade-in{animation:fade .5s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .cross-bg{background-image:radial-gradient(#0d948815 1.5px,transparent 1.5px);background-size:22px 22px}
+</style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+    <a href="#/home" class="flex items-center gap-2.5 shrink-0">
+      <span class="w-9 h-9 rounded-xl bg-teal-600 text-white grid place-items-center">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+      </span>
+      <span class="leading-tight">
+        <span class="block font-black tracking-tight text-teal-900 text-sm sm:text-base">HEALTH SUMMIT <span class="text-teal-600">2026</span></span>
+        <span class="block text-[9px] uppercase tracking-widest text-slate-500" data-en="Investment & Pharmaceutical Industries" data-ar="الاستثمار الصحي والصناعات الدوائية">Investment & Pharmaceutical Industries</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a class="hover:text-teal-600" href="#/home" data-nav="home" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a class="hover:text-teal-600" href="#/about" data-nav="about" data-en="About the Summit" data-ar="عن القمة">About the Summit</a>
+      <a class="hover:text-teal-600" href="#/register" data-nav="register" data-en="Registration" data-ar="التسجيل">Registration</a>
+      <a class="hover:text-teal-600" href="#/contact" data-nav="contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button id="langBtn" onclick="toggleLang()" class="text-xs font-bold border border-slate-300 rounded-full px-3 py-1.5 hover:border-teal-600 hover:text-teal-600">العربية</button>
+      <a href="#/register" class="hidden sm:inline-block bg-teal-600 hover:bg-teal-700 text-white text-sm font-bold px-4 py-2 rounded-lg" data-en="Register now" data-ar="سجّل الآن">Register now</a>
+      <button class="md:hidden p-2" onclick="document.getElementById('mnav').classList.toggle('hidden')" aria-label="menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="mnav" class="hidden md:hidden border-t border-slate-100 bg-white px-6 py-3 space-y-2 text-sm font-medium">
+    <a class="block py-1" href="#/home" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a class="block py-1" href="#/about" data-en="About the Summit" data-ar="عن القمة">About the Summit</a>
+    <a class="block py-1" href="#/register" data-en="Registration" data-ar="التسجيل">Registration</a>
+    <a class="block py-1" href="#/contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+<!-- ================= HOME ================= -->
+<section data-page="home">
+  <!-- Hero -->
+  <div class="bg-teal-950 text-white relative overflow-hidden">
+    <div class="absolute inset-0 cross-bg opacity-40"></div>
+    <div class="absolute -top-24 -end-24 w-96 h-96 rounded-full bg-teal-600/30 blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24 relative text-center">
+      <p class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest bg-white/10 border border-white/15 rounded-full px-4 py-2 mb-7">
+        <span class="w-2 h-2 rounded-full bg-lime-400 animate-pulse"></span>
+        <span data-en="15–16 November 2026 · Tripoli International Fairground" data-ar="١٥–١٦ نوفمبر ٢٠٢٦ · معرض طرابلس الدولي">15–16 November 2026 · Tripoli International Fairground</span>
+      </p>
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight max-w-4xl mx-auto leading-tight" data-en="Health Investment & Pharmaceutical Industries Summit" data-ar="قمة الاستثمار الصحي والصناعات الدوائية">Health Investment & Pharmaceutical Industries Summit</h1>
+      <p class="mt-6 text-lg text-teal-100/90 max-w-2xl mx-auto" data-en="Two days connecting investors, manufacturers, regulators, and healthcare leaders shaping the future of the sector." data-ar="يومان يجمعان المستثمرين والمصنّعين والجهات التنظيمية وقادة الرعاية الصحية لرسم مستقبل القطاع.">Two days connecting investors, manufacturers, regulators, and healthcare leaders shaping the future of the sector.</p>
+      <div class="mt-9 flex flex-wrap justify-center gap-4">
+        <a href="#/register" class="bg-lime-400 hover:bg-lime-300 text-teal-950 font-black px-8 py-4 rounded-lg text-lg" data-en="Register to attend" data-ar="سجّل للحضور">Register to attend</a>
+        <a href="#/about" class="border border-white/25 hover:border-lime-400 hover:text-lime-400 font-semibold px-8 py-4 rounded-lg" data-en="About the Summit" data-ar="عن القمة">About the Summit</a>
+      </div>
+      <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
+        <div><p class="text-3xl sm:text-4xl font-black text-lime-400">500+</p><p class="text-xs text-teal-200 mt-1" data-en="Delegates" data-ar="مشارك">Delegates</p></div>
+        <div><p class="text-3xl sm:text-4xl font-black text-lime-400">30+</p><p class="text-xs text-teal-200 mt-1" data-en="Speakers" data-ar="متحدث">Speakers</p></div>
+        <div><p class="text-3xl sm:text-4xl font-black text-lime-400">20+</p><p class="text-xs text-teal-200 mt-1" data-en="Exhibitors" data-ar="عارض">Exhibitors</p></div>
+        <div><p class="text-3xl sm:text-4xl font-black text-lime-400">2</p><p class="text-xs text-teal-200 mt-1" data-en="Days" data-ar="أيام">Days</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About teaser -->
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-20 text-center">
+    <h2 class="text-3xl sm:text-4xl font-black text-teal-900" data-en="Why this Summit" data-ar="لماذا هذه القمة">Why this Summit</h2>
+    <p class="mt-5 text-slate-600 leading-relaxed max-w-3xl mx-auto" data-en="The region's healthcare and pharmaceutical sectors are entering a decade of transformation. The Summit brings the entire value chain into one room — policy, capital, manufacturing, and care delivery — to turn opportunity into agreements." data-ar="يدخل قطاعا الرعاية الصحية والصناعات الدوائية في المنطقة عقداً من التحول. تجمع القمة سلسلة القيمة كاملة في مكان واحد — السياسات ورأس المال والتصنيع وتقديم الرعاية — لتحويل الفرص إلى اتفاقيات.">The region's healthcare and pharmaceutical sectors are entering a decade of transformation. The Summit brings the entire value chain into one room — policy, capital, manufacturing, and care delivery — to turn opportunity into agreements.</p>
+    <a href="#/about" class="inline-block mt-7 text-teal-700 font-bold hover:underline" data-en="Learn more →" data-ar="اعرف المزيد ←">Learn more →</a>
+  </div>
+
+  <!-- Speakers -->
+  <div class="bg-slate-50 border-y border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-black text-teal-900" data-en="Featured speakers" data-ar="أبرز المتحدثين">Featured speakers</h2>
+        <p class="mt-3 text-slate-500" data-en="Leaders from across the health and pharma ecosystem" data-ar="قيادات من مختلف منظومة الصحة والدواء">Leaders from across the health and pharma ecosystem</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6" id="speakerGrid"></div>
+    </div>
+  </div>
+
+  <!-- Agenda -->
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-20">
+    <h2 class="text-3xl sm:text-4xl font-black text-teal-900 text-center" data-en="Agenda" data-ar="جدول الأعمال">Agenda</h2>
+    <div class="flex justify-center gap-3 mt-8 mb-10">
+      <button id="d1btn" onclick="setDay(1)" class="px-6 py-2.5 rounded-full font-bold text-sm bg-teal-600 text-white" data-en="Day 1 — Nov 15" data-ar="اليوم الأول — ١٥ نوفمبر">Day 1 — Nov 15</button>
+      <button id="d2btn" onclick="setDay(2)" class="px-6 py-2.5 rounded-full font-bold text-sm bg-slate-100 text-slate-600 hover:bg-slate-200" data-en="Day 2 — Nov 16" data-ar="اليوم الثاني — ١٦ نوفمبر">Day 2 — Nov 16</button>
+    </div>
+    <div id="agendaList" class="space-y-4"></div>
+  </div>
+
+  <!-- Sponsors -->
+  <div class="bg-teal-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 text-center">
+      <h2 class="text-3xl sm:text-4xl font-black" data-en="Our sponsors" data-ar="الرعاة">Our sponsors</h2>
+      <p class="mt-3 text-teal-200" data-en="Partners making the Summit possible" data-ar="شركاء يجعلون القمة ممكنة">Partners making the Summit possible</p>
+      <div class="mt-12">
+        <p class="text-xs uppercase tracking-widest text-lime-400 font-bold mb-5" data-en="Platinum" data-ar="بلاتيني">Platinum</p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <div class="w-56 h-24 rounded-xl bg-white/10 border border-white/10 grid place-items-center font-black text-xl tracking-wide">PHARMA<span class="text-lime-400">ONE</span></div>
+          <div class="w-56 h-24 rounded-xl bg-white/10 border border-white/10 grid place-items-center font-black text-xl tracking-wide">MED<span class="text-lime-400">INVEST</span></div>
+        </div>
+        <p class="text-xs uppercase tracking-widest text-teal-300 font-bold mt-10 mb-5" data-en="Gold" data-ar="ذهبي">Gold</p>
+        <div class="flex flex-wrap justify-center gap-5">
+          <div class="w-44 h-18 py-5 rounded-xl bg-white/5 border border-white/10 grid place-items-center font-extrabold tracking-wide">BIOCARE</div>
+          <div class="w-44 h-18 py-5 rounded-xl bg-white/5 border border-white/10 grid place-items-center font-extrabold tracking-wide">SAHARALAB</div>
+          <div class="w-44 h-18 py-5 rounded-xl bg-white/5 border border-white/10 grid place-items-center font-extrabold tracking-wide">CUREPLUS</div>
+        </div>
+        <p class="text-xs uppercase tracking-widest text-teal-400 font-bold mt-10 mb-5" data-en="Silver" data-ar="فضي">Silver</p>
+        <div class="flex flex-wrap justify-center gap-4 opacity-80">
+          <div class="w-36 py-3.5 rounded-lg bg-white/5 grid place-items-center font-bold text-sm">VITALIS</div>
+          <div class="w-36 py-3.5 rounded-lg bg-white/5 grid place-items-center font-bold text-sm">GENAPHARM</div>
+          <div class="w-36 py-3.5 rounded-lg bg-white/5 grid place-items-center font-bold text-sm">OASISMED</div>
+          <div class="w-36 py-3.5 rounded-lg bg-white/5 grid place-items-center font-bold text-sm">ALNAJMA</div>
+        </div>
+      </div>
+      <p class="mt-12 text-sm text-teal-300" data-en="Interested in sponsoring? Contact us for the sponsorship prospectus." data-ar="مهتم بالرعاية؟ تواصل معنا للحصول على ملف الرعاية.">Interested in sponsoring? Contact us for the sponsorship prospectus.</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-20 text-center">
+    <h2 class="text-3xl sm:text-4xl font-black text-teal-900" data-en="Secure your seat" data-ar="احجز مقعدك">Secure your seat</h2>
+    <p class="mt-4 text-slate-600" data-en="Attendance is free but seats are limited. Registration closes November 10." data-ar="الحضور مجاني والمقاعد محدودة. يُغلق التسجيل في ١٠ نوفمبر.">Attendance is free but seats are limited. Registration closes November 10.</p>
+    <a href="#/register" class="inline-block mt-8 bg-teal-600 hover:bg-teal-700 text-white font-black px-9 py-4 rounded-lg text-lg" data-en="Register now" data-ar="سجّل الآن">Register now</a>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section data-page="about">
+  <div class="bg-teal-950 text-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+    <h1 class="text-4xl font-black" data-en="About the Summit" data-ar="عن القمة">About the Summit</h1>
+    <p class="mt-3 text-teal-200 max-w-2xl" data-en="Where health policy, capital, and industry meet." data-ar="حيث تلتقي السياسات الصحية ورأس المال والصناعة.">Where health policy, capital, and industry meet.</p>
+  </div></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-2 gap-12">
+    <div>
+      <h2 class="text-2xl font-black text-teal-900" data-en="Overview & objectives" data-ar="نظرة عامة والأهداف">Overview & objectives</h2>
+      <p class="mt-4 text-slate-600 leading-relaxed" data-en="The Summit is a two-day national platform for advancing investment in healthcare infrastructure and building a competitive pharmaceutical manufacturing base. Sessions combine keynotes, panels, and structured B2B meetings." data-ar="القمة منصة وطنية على مدى يومين لتعزيز الاستثمار في البنية التحتية الصحية وبناء قاعدة تنافسية لتصنيع الأدوية. تجمع الجلسات كلمات رئيسية وحلقات نقاش ولقاءات أعمال منظمة.">The Summit is a two-day national platform for advancing investment in healthcare infrastructure and building a competitive pharmaceutical manufacturing base. Sessions combine keynotes, panels, and structured B2B meetings.</p>
+      <ul class="mt-6 space-y-3">
+        <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-teal-100 text-teal-700 grid place-items-center shrink-0 font-bold text-sm">✓</span><span class="text-slate-600" data-en="Showcase investment-ready health projects" data-ar="عرض مشاريع صحية جاهزة للاستثمار">Showcase investment-ready health projects</span></li>
+        <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-teal-100 text-teal-700 grid place-items-center shrink-0 font-bold text-sm">✓</span><span class="text-slate-600" data-en="Connect local manufacturers with international partners" data-ar="ربط المصنّعين المحليين بشركاء دوليين">Connect local manufacturers with international partners</span></li>
+        <li class="flex gap-3"><span class="w-6 h-6 rounded-full bg-teal-100 text-teal-700 grid place-items-center shrink-0 font-bold text-sm">✓</span><span class="text-slate-600" data-en="Advance regulatory and quality frameworks" data-ar="تطوير الأطر التنظيمية ومعايير الجودة">Advance regulatory and quality frameworks</span></li>
+      </ul>
+      <h2 class="text-2xl font-black text-teal-900 mt-10" data-en="Themes" data-ar="المحاور">Themes</h2>
+      <div class="flex flex-wrap gap-3 mt-4" id="themeChips"></div>
+    </div>
+    <div class="space-y-6">
+      <div class="rounded-2xl border border-slate-200 p-7">
+        <h3 class="font-black text-teal-900" data-en="Organizers" data-ar="الجهات المنظمة">Organizers</h3>
+        <p class="mt-2 text-sm text-slate-600" data-en="Organized by EL PR & Media Consultancy in partnership with sector authorities and private-sector leaders." data-ar="تنظيم EL PR للاستشارات الإعلامية بالشراكة مع الجهات القطاعية وقادة القطاع الخاص.">Organized by EL PR & Media Consultancy in partnership with sector authorities and private-sector leaders.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-7">
+        <h3 class="font-black text-teal-900" data-en="Venue" data-ar="المكان">Venue</h3>
+        <p class="mt-2 text-sm text-slate-600" data-en="Tripoli International Fairground — Main Conference Hall. Parking and badge pickup from 8:00 AM." data-ar="معرض طرابلس الدولي — القاعة الرئيسية. مواقف السيارات واستلام البطاقات من الساعة ٨ صباحاً.">Tripoli International Fairground — Main Conference Hall. Parking and badge pickup from 8:00 AM.</p>
+        <div class="mt-4 rounded-xl bg-slate-100 h-36 grid place-items-center text-slate-400 text-sm" data-en="[ Venue map ]" data-ar="[ خريطة المكان ]">[ Venue map ]</div>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-7">
+        <h3 class="font-black text-teal-900" data-en="Who should attend" data-ar="لمن هذه القمة">Who should attend</h3>
+        <p class="mt-2 text-sm text-slate-600" data-en="Investors & funds · Pharma manufacturers & importers · Hospital groups · Regulators & policymakers · MedTech startups · Insurers." data-ar="المستثمرون والصناديق · مصنّعو ومستوردو الأدوية · المجموعات الصحية · الجهات التنظيمية وصنّاع السياسات · شركات التقنية الطبية الناشئة · شركات التأمين.">Investors & funds · Pharma manufacturers & importers · Hospital groups · Regulators & policymakers · MedTech startups · Insurers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REGISTRATION ================= -->
+<section data-page="register">
+  <div class="bg-teal-950 text-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+    <h1 class="text-4xl font-black" data-en="Registration" data-ar="التسجيل">Registration</h1>
+    <p class="mt-3 text-teal-200 max-w-2xl" data-en="Free attendance · Limited seats · Closes November 10" data-ar="حضور مجاني · مقاعد محدودة · يُغلق في ١٠ نوفمبر">Free attendance · Limited seats · Closes November 10</p>
+  </div></div>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+    <form id="regForm" class="space-y-5" onsubmit="return regSubmit()">
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="text-sm font-semibold" data-en="Full name *" data-ar="الاسم الكامل *">Full name *</label><input required class="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-600"></div>
+        <div><label class="text-sm font-semibold" data-en="Organization *" data-ar="الجهة / المؤسسة *">Organization *</label><input required class="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-600"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="text-sm font-semibold" data-en="Job title *" data-ar="المسمى الوظيفي *">Job title *</label><input required class="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-600"></div>
+        <div><label class="text-sm font-semibold" data-en="Attendee type *" data-ar="صفة الحضور *">Attendee type *</label>
+          <select class="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-teal-600">
+            <option data-en="Investor" data-ar="مستثمر">Investor</option>
+            <option data-en="Manufacturer / Supplier" data-ar="مصنّع / مورّد">Manufacturer / Supplier</option>
+            <option data-en="Healthcare provider" data-ar="مقدم رعاية صحية">Healthcare provider</option>
+            <option data-en="Government / Regulator" data-ar="جهة حكومية / تنظيمية">Government / Regulator</option>
+            <option data-en="Media" data-ar="إعلام">Media</option>
+            <option data-en="Other" data-ar="أخرى">Other</option>
+          </select></div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="text-sm font-semibold" data-en="Email *" data-ar="البريد الإلكتروني *">Email *</label><input type="email" required class="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-600"></div>
+        <div><label class="text-sm font-semibold" data-en="Phone *" data-ar="رقم الهاتف *">Phone *</label><input required class="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-600"></div>
+      </div>
+      <p class="text-xs text-slate-500" data-en="Your data is used only for summit organization and is never shared with third parties." data-ar="تُستخدم بياناتك لأغراض تنظيم القمة فقط ولا تُشارك مع أي جهة خارجية.">Your data is used only for summit organization and is never shared with third parties.</p>
+      <button class="w-full sm:w-auto bg-teal-600 hover:bg-teal-700 text-white font-black px-10 py-4 rounded-lg" data-en="Submit registration" data-ar="إرسال التسجيل">Submit registration</button>
+    </form>
+    <div id="regOk" class="hidden text-center py-14 fade-in">
+      <div class="w-20 h-20 mx-auto rounded-full bg-teal-100 text-teal-700 grid place-items-center">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+      </div>
+      <h2 class="mt-6 text-2xl font-black text-teal-900" data-en="Registration received!" data-ar="تم استلام تسجيلك!">Registration received!</h2>
+      <p class="mt-3 text-slate-600" data-en="Your reference number:" data-ar="رقمك المرجعي:">Your reference number:</p>
+      <p class="mt-1 text-xl font-black tracking-widest text-teal-700" id="refNo">HS26-0000</p>
+      <p class="mt-4 text-sm text-slate-500" data-en="A confirmation email has been sent to you. (Demo — no real email is sent)" data-ar="تم إرسال بريد تأكيد إليك. (نسخة تجريبية — لا يُرسل بريد فعلي)">A confirmation email has been sent to you. (Demo — no real email is sent)</p>
+      <button onclick="regReset()" class="mt-7 text-teal-700 font-bold hover:underline" data-en="Register another attendee" data-ar="تسجيل مشارك آخر">Register another attendee</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section data-page="contact">
+  <div class="bg-teal-950 text-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+    <h1 class="text-4xl font-black" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h1>
+    <p class="mt-3 text-teal-200 max-w-2xl" data-en="Sponsorship, media, and general enquiries." data-ar="استفسارات الرعاية والإعلام والاستفسارات العامة.">Sponsorship, media, and general enquiries.</p>
+  </div></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-5 gap-10">
+    <form class="lg:col-span-3 space-y-5" onsubmit="return demoSubmit(this)">
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="text-sm font-semibold" data-en="Full name" data-ar="الاسم الكامل">Full name</label><input required class="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-600"></div>
+        <div><label class="text-sm font-semibold" data-en="Email" data-ar="البريد الإلكتروني">Email</label><input type="email" required class="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-600"></div>
+      </div>
+      <div><label class="text-sm font-semibold" data-en="Enquiry type" data-ar="نوع الاستفسار">Enquiry type</label>
+        <select class="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-teal-600">
+          <option data-en="Sponsorship" data-ar="رعاية">Sponsorship</option>
+          <option data-en="Media accreditation" data-ar="اعتماد إعلامي">Media accreditation</option>
+          <option data-en="Speaking opportunity" data-ar="فرصة تحدث">Speaking opportunity</option>
+          <option data-en="General" data-ar="عام">General</option>
+        </select></div>
+      <div><label class="text-sm font-semibold" data-en="Message" data-ar="الرسالة">Message</label><textarea rows="5" required class="mt-1.5 w-full rounded-lg border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-teal-600"></textarea></div>
+      <button class="bg-teal-600 hover:bg-teal-700 text-white font-black px-8 py-3.5 rounded-lg" data-en="Send message" data-ar="أرسل الرسالة">Send message</button>
+      <p class="hidden text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-3 text-sm font-medium formOk" data-en="✓ Thank you — the organizing team will reply shortly. (Demo)" data-ar="✓ شكراً لك — سيرد فريق التنظيم قريباً. (نسخة تجريبية)">✓ Thank you — the organizing team will reply shortly. (Demo)</p>
+    </form>
+    <div class="lg:col-span-2 space-y-5">
+      <div class="rounded-2xl border border-slate-200 p-6"><h3 class="font-black text-teal-900" data-en="Organizing office" data-ar="مكتب التنظيم">Organizing office</h3><p class="mt-2 text-sm text-slate-600">info@healthsummit.ly<br>+218 21 000 0000</p></div>
+      <div class="rounded-2xl border border-slate-200 p-6"><h3 class="font-black text-teal-900" data-en="Venue" data-ar="المكان">Venue</h3><p class="mt-2 text-sm text-slate-600" data-en="Tripoli International Fairground, Main Hall" data-ar="معرض طرابلس الدولي، القاعة الرئيسية">Tripoli International Fairground, Main Hall</p></div>
+      <div class="rounded-2xl bg-slate-100 h-44 grid place-items-center text-slate-400 text-sm font-medium" data-en="[ Venue map ]" data-ar="[ خريطة المكان ]">[ Venue map ]</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-teal-950 text-teal-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid sm:grid-cols-3 gap-8 text-sm">
+    <div>
+      <p class="font-black text-white">HEALTH SUMMIT 2026</p>
+      <p class="mt-2 text-teal-300" data-en="Health Investment & Pharmaceutical Industries Summit — Tripoli, Libya." data-ar="قمة الاستثمار الصحي والصناعات الدوائية — طرابلس، ليبيا.">Health Investment & Pharmaceutical Industries Summit — Tripoli, Libya.</p>
+    </div>
+    <div>
+      <p class="font-bold text-white mb-3" data-en="Pages" data-ar="الصفحات">Pages</p>
+      <div class="space-y-1.5">
+        <a class="block hover:text-white" href="#/home" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a class="block hover:text-white" href="#/about" data-en="About the Summit" data-ar="عن القمة">About the Summit</a>
+        <a class="block hover:text-white" href="#/register" data-en="Registration" data-ar="التسجيل">Registration</a>
+        <a class="block hover:text-white" href="#/contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+      </div>
+    </div>
+    <div>
+      <p class="font-bold text-white mb-3" data-en="Contact" data-ar="تواصل">Contact</p>
+      <p>info@healthsummit.ly</p><p>+218 21 000 0000</p>
+    </div>
+  </div>
+  <div class="border-t border-teal-900 text-center text-xs text-teal-400 py-4">© <span id="yr"></span> Health Summit — <span data-en="Demo preview with placeholder content & dates" data-ar="نسخة تجريبية بمحتوى وتواريخ مؤقتة">Demo preview with placeholder content & dates</span></div>
+</footer>
+
+<script>
+const speakers = [
+  {en:['Dr. H. Mansouri','Minister of Health (TBC)'], ar:['د. هـ. المنصوري','وزير الصحة (بانتظار التأكيد)'], i:'HM', c:'#0d9488'},
+  {en:['Eng. R. Kabir','CEO, PharmaOne'], ar:['م. ر. الكبير','الرئيس التنفيذي، فارما ون'], i:'RK', c:'#115e59'},
+  {en:['Dr. L. Ashour','Hospital Group Chair'], ar:['د. ل. عاشور','رئيسة مجموعة مستشفيات'], i:'LA', c:'#134e4a'},
+  {en:['Mr. T. Benyoussef','Investment Fund Director'], ar:['أ. ت. بن يوسف','مدير صندوق استثمار'], i:'TB', c:'#0f766e'},
+  {en:['Dr. S. El-Obeidi','Regulatory Authority'], ar:['د. س. العبيدي','الهيئة التنظيمية'], i:'SO', c:'#042f2e'},
+  {en:['Ms. A. Farkash','MedTech Founder'], ar:['أ. أ. فركاش','مؤسِّسة شركة تقنية طبية'], i:'AF', c:'#0d9488'},
+  {en:['Prof. K. Zentani','Pharmacy Faculty Dean'], ar:['أ.د. ك. الزنتاني','عميد كلية الصيدلة'], i:'KZ', c:'#115e59'},
+  {en:['Mr. O. Dernawi','Insurance Sector Lead'], ar:['أ. ع. الدرناوي','قيادي بقطاع التأمين'], i:'OD', c:'#134e4a'},
+];
+const agenda = {
+  1: [
+    {t:'09:00', en:['Registration & welcome coffee','Badge pickup, networking'], ar:['التسجيل وقهوة الترحيب','استلام البطاقات والتعارف']},
+    {t:'10:00', en:['Opening ceremony','Keynotes from summit patrons'], ar:['حفل الافتتاح','كلمات رئيسية من رعاة القمة']},
+    {t:'11:30', en:['Panel: Investing in healthcare infrastructure','Funds, PPPs, and project pipelines'], ar:['جلسة: الاستثمار في البنية التحتية الصحية','الصناديق والشراكات وخطوط المشاريع']},
+    {t:'13:00', en:['Lunch & exhibition tour',''], ar:['الغداء وجولة المعرض','']},
+    {t:'14:30', en:['Panel: Local pharmaceutical manufacturing','From import dependence to production'], ar:['جلسة: التصنيع الدوائي المحلي','من الاعتماد على الاستيراد إلى الإنتاج']},
+    {t:'16:30', en:['B2B meetings — Round 1','Pre-scheduled matchmaking'], ar:['لقاءات أعمال — الجولة الأولى','مواعيد منسقة مسبقاً']},
+  ],
+  2: [
+    {t:'09:30', en:['Panel: Regulation & quality standards','GMP, registration, and market access'], ar:['جلسة: التنظيم ومعايير الجودة','التصنيع الجيد والتسجيل والنفاذ للسوق']},
+    {t:'11:00', en:['Showcase: Investment-ready projects','10-minute pitches to investors'], ar:['عروض: مشاريع جاهزة للاستثمار','عروض من ١٠ دقائق أمام المستثمرين']},
+    {t:'13:00', en:['Lunch & exhibition',''], ar:['الغداء والمعرض','']},
+    {t:'14:00', en:['Panel: Digital health & insurance','Data, coverage, and MedTech'], ar:['جلسة: الصحة الرقمية والتأمين','البيانات والتغطية والتقنية الطبية']},
+    {t:'15:30', en:['B2B meetings — Round 2',''], ar:['لقاءات أعمال — الجولة الثانية','']},
+    {t:'17:00', en:['Closing & declarations','Summit outcomes and MoU signings'], ar:['الختام والإعلانات','مخرجات القمة وتوقيع مذكرات التفاهم']},
+  ]
+};
+const themes = [
+  {en:'Health infrastructure', ar:'البنية التحتية الصحية'},{en:'Pharma manufacturing', ar:'التصنيع الدوائي'},
+  {en:'Investment & PPP', ar:'الاستثمار والشراكات'},{en:'Regulation & GMP', ar:'التنظيم والجودة'},
+  {en:'Digital health', ar:'الصحة الرقمية'},{en:'Medical supply chains', ar:'سلاسل الإمداد الطبي'},
+];
+let lang='en', day=1;
+function speakerCard(s){
+  const [n,r]=s[lang];
+  return `<div class="bg-white rounded-2xl border border-slate-200 p-6 text-center hover:shadow-md transition">
+    <div class="w-20 h-20 mx-auto rounded-full text-white grid place-items-center text-xl font-black" style="background:${s.c}">${s.i}</div>
+    <h3 class="mt-4 font-bold text-sm">${n}</h3><p class="text-xs text-slate-500 mt-1">${r}</p>
+  </div>`;
+}
+function renderAgenda(){
+  document.getElementById('agendaList').innerHTML = agenda[day].map(x=>{
+    const [t,d]=x[lang];
+    return `<div class="flex gap-5 rounded-xl border border-slate-200 p-5 hover:border-teal-200 transition">
+      <span class="font-black text-teal-700 w-14 shrink-0">${x.t}</span>
+      <div><h3 class="font-bold">${t}</h3>${d?`<p class="text-sm text-slate-500 mt-0.5">${d}</p>`:''}</div>
+    </div>`;
+  }).join('');
+}
+function setDay(d){
+  day=d;
+  const on='px-6 py-2.5 rounded-full font-bold text-sm bg-teal-600 text-white';
+  const off='px-6 py-2.5 rounded-full font-bold text-sm bg-slate-100 text-slate-600 hover:bg-slate-200';
+  document.getElementById('d1btn').className = d===1?on:off;
+  document.getElementById('d2btn').className = d===2?on:off;
+  renderAgenda();
+}
+function renderDynamic(){
+  document.getElementById('speakerGrid').innerHTML = speakers.map(speakerCard).join('');
+  document.getElementById('themeChips').innerHTML = themes.map(t=>`<span class="text-sm font-semibold bg-teal-50 text-teal-800 border border-teal-100 rounded-full px-4 py-2">${t[lang]}</span>`).join('');
+  renderAgenda();
+}
+function toggleLang(){
+  lang = lang==='en'?'ar':'en';
+  document.documentElement.lang=lang;
+  document.documentElement.dir = lang==='ar'?'rtl':'ltr';
+  document.getElementById('langBtn').textContent = lang==='en'?'العربية':'English';
+  document.querySelectorAll('[data-en]').forEach(el=>{ el.textContent=el.dataset[lang]; });
+  renderDynamic();
+}
+function route(){
+  const page=(location.hash.replace('#/','')||'home').split('?')[0];
+  document.querySelectorAll('[data-page]').forEach(s=>{
+    s.classList.toggle('active', s.dataset.page===page);
+    if(s.dataset.page===page){ s.classList.remove('fade-in'); void s.offsetWidth; s.classList.add('fade-in'); }
+  });
+  document.querySelectorAll('[data-nav]').forEach(a=>{
+    a.classList.toggle('text-teal-600', a.dataset.nav===page);
+    a.classList.toggle('font-bold', a.dataset.nav===page);
+  });
+  document.getElementById('mnav').classList.add('hidden');
+  window.scrollTo({top:0});
+}
+function demoSubmit(f){ f.querySelector('.formOk').classList.remove('hidden'); return false; }
+function regSubmit(){
+  document.getElementById('refNo').textContent = 'HS26-' + String(Math.floor(1000+Math.random()*9000));
+  document.getElementById('regForm').classList.add('hidden');
+  document.getElementById('regOk').classList.remove('hidden');
+  window.scrollTo({top:0}); return false;
+}
+function regReset(){
+  document.getElementById('regForm').reset();
+  document.getElementById('regForm').classList.remove('hidden');
+  document.getElementById('regOk').classList.add('hidden');
+}
+window.addEventListener('hashchange', route);
+document.getElementById('yr').textContent=new Date().getFullYear();
+renderDynamic(); route();
+</script>
+</body>
+</html>

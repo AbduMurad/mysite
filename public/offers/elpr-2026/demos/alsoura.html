@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Al Soura Media Services — Demo</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { ink:{950:'#0a0a0f',900:'#101018',800:'#17171f',700:'#22222c'}, flame:{400:'#fbbf24',500:'#f59e0b',600:'#ea580c'} },
+  fontFamily: { sans: ['Inter','Noto Kufi Arabic','sans-serif'] }
+} } }
+</script>
+<style>
+  body{font-family:Inter,'Noto Kufi Arabic',sans-serif}
+  [dir="rtl"]{font-family:'Noto Kufi Arabic',Inter,sans-serif}
+  [data-page]{display:none}
+  [data-page].active{display:block}
+  .fade-in{animation:fade .5s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .grad-text{background:linear-gradient(90deg,#fbbf24,#ea580c);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .glow{position:absolute;border-radius:9999px;filter:blur(100px);opacity:.18;pointer-events:none}
+  .tile{background:linear-gradient(135deg,var(--a),var(--b))}
+</style>
+</head>
+<body class="bg-ink-950 text-slate-200 antialiased">
+
+<header class="sticky top-0 z-40 bg-ink-950/85 backdrop-blur border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+    <a href="#/home" class="flex items-center gap-2.5 shrink-0">
+      <span class="w-9 h-9 rounded-full border-2 border-flame-500 grid place-items-center">
+        <span class="w-3.5 h-3.5 rounded-full bg-flame-500"></span>
+      </span>
+      <span class="leading-tight">
+        <span class="block font-black tracking-tight text-white">AL SOURA</span>
+        <span class="block text-[10px] uppercase tracking-widest text-slate-400" data-en="Media Services" data-ar="للخدمات الإعلامية">Media Services</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+      <a class="hover:text-flame-400" href="#/home" data-nav="home" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a class="hover:text-flame-400" href="#/about" data-nav="about" data-en="About Us" data-ar="من نحن">About Us</a>
+      <a class="hover:text-flame-400" href="#/services" data-nav="services" data-en="Services" data-ar="خدماتنا">Services</a>
+      <a class="hover:text-flame-400" href="#/contact" data-nav="contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button id="langBtn" onclick="toggleLang()" class="text-xs font-bold border border-white/20 rounded-full px-3 py-1.5 hover:border-flame-400 hover:text-flame-400">العربية</button>
+      <a href="#/contact" class="hidden sm:inline-block bg-flame-500 hover:bg-flame-600 text-ink-950 text-sm font-bold px-4 py-2 rounded-lg" data-en="Start a project" data-ar="ابدأ مشروعاً">Start a project</a>
+      <button class="md:hidden p-2" onclick="document.getElementById('mnav').classList.toggle('hidden')" aria-label="menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="mnav" class="hidden md:hidden border-t border-white/5 px-6 py-3 space-y-2 text-sm">
+    <a class="block py-1" href="#/home" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a class="block py-1" href="#/about" data-en="About Us" data-ar="من نحن">About Us</a>
+    <a class="block py-1" href="#/services" data-en="Services" data-ar="خدماتنا">Services</a>
+    <a class="block py-1" href="#/contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+<!-- HOME -->
+<section data-page="home">
+  <div class="relative overflow-hidden">
+    <div class="glow w-[500px] h-[500px] bg-flame-600 -top-40 left-1/4"></div>
+    <div class="glow w-96 h-96 bg-amber-400 top-80 right-0"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-20 text-center relative">
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-flame-400 mb-6" data-en="Video · Photography · Design · Social" data-ar="فيديو · تصوير · تصميم · سوشيال">Video · Photography · Design · Social</p>
+      <h1 class="text-4xl sm:text-7xl font-black tracking-tight text-white leading-tight" data-en="We craft visual stories" data-ar="نصنع قصصاً بصرية">We craft <span class="grad-text">visual stories</span></h1>
+      <p class="mt-6 text-lg text-slate-400 max-w-2xl mx-auto" data-en="Al Soura is a full-service media production house — from concept and camera to the final frame." data-ar="الصورة بيت إنتاج إعلامي متكامل — من الفكرة والكاميرا إلى اللقطة الأخيرة.">Al Soura is a full-service media production house — from concept and camera to the final frame.</p>
+      <div class="mt-9 flex flex-wrap justify-center gap-4">
+        <a href="#/services" class="bg-flame-500 hover:bg-flame-600 text-ink-950 font-bold px-7 py-3.5 rounded-lg" data-en="Our services" data-ar="خدماتنا">Our services</a>
+        <a href="#/contact" class="border border-white/20 hover:border-flame-400 hover:text-flame-400 font-semibold px-7 py-3.5 rounded-lg" data-en="Get a quote" data-ar="اطلب عرض سعر">Get a quote</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Showreel -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
+    <div class="relative rounded-3xl overflow-hidden tile aspect-video grid place-items-center" style="--a:#1c1917;--b:#292018">
+      <div class="absolute inset-0 opacity-30" style="background:radial-gradient(600px 200px at 30% 20%,#f59e0b33,transparent),radial-gradient(500px 300px at 80% 80%,#ea580c33,transparent)"></div>
+      <button class="relative w-20 h-20 rounded-full bg-flame-500 hover:scale-110 transition grid place-items-center" onclick="alert('Showreel plays here (demo)')" aria-label="play">
+        <svg class="w-8 h-8 text-ink-950 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <p class="absolute bottom-5 text-sm text-slate-400 font-medium tracking-wide" data-en="SHOWREEL 2026 — 90 SEC" data-ar="عرض أعمالنا ٢٠٢٦ — ٩٠ ثانية">SHOWREEL 2026 — 90 SEC</p>
+    </div>
+  </div>
+
+  <!-- Services overview -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
+    <h2 class="text-3xl sm:text-4xl font-black text-white text-center" data-en="What we produce" data-ar="ماذا ننتج">What we produce</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12" id="svcCards"></div>
+  </div>
+
+  <!-- Featured work -->
+  <div class="bg-ink-900 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+      <div class="flex items-end justify-between mb-10">
+        <h2 class="text-3xl font-black text-white" data-en="Featured work" data-ar="أعمال مختارة">Featured work</h2>
+        <span class="text-sm text-flame-400 font-semibold" data-en="Selected projects" data-ar="مشاريع منتقاة">Selected projects</span>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="workGrid"></div>
+    </div>
+  </div>
+
+  <!-- Clients + CTA -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20 text-center">
+    <p class="text-xs uppercase tracking-widest text-slate-500 mb-6" data-en="Brands we've filmed for" data-ar="علامات صوّرنا لها">Brands we've filmed for</p>
+    <div class="flex flex-wrap justify-center gap-x-12 gap-y-4 opacity-50 font-extrabold text-lg tracking-wide">
+      <span>ATLAS</span><span>MEDGATE</span><span>SARAYA</span><span>NOVA<span class="text-slate-600">TV</span></span><span>ZUWARA<span class="text-slate-600">FEST</span></span>
+    </div>
+    <h2 class="mt-20 text-3xl sm:text-5xl font-black text-white" data-en="Have a story to tell?" data-ar="لديك قصة تُروى؟">Have a story to tell?</h2>
+    <a href="#/contact" class="inline-block mt-8 bg-flame-500 hover:bg-flame-600 text-ink-950 font-black px-9 py-4 rounded-lg text-lg" data-en="Let's shoot it" data-ar="لنصوّرها معاً">Let's shoot it</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section data-page="about">
+  <div class="border-b border-white/5 bg-ink-900"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+    <h1 class="text-4xl font-black text-white" data-en="About Us" data-ar="من نحن">About Us</h1>
+    <p class="mt-3 text-slate-400 max-w-2xl" data-en="A crew obsessed with the craft of the image." data-ar="فريق شغوف بصناعة الصورة.">A crew obsessed with the craft of the image.</p>
+  </div></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-2 gap-12">
+    <div>
+      <h2 class="text-2xl font-black text-white" data-en="Our story" data-ar="قصتنا">Our story</h2>
+      <p class="mt-4 text-slate-400 leading-relaxed" data-en="Al Soura — 'The Picture' — began with a single camera and a simple conviction: every brand, institution, and event in Libya deserves world-class visuals. Today our productions run from documentary film to full campaign coverage." data-ar="بدأت «الصورة» بكاميرا واحدة وقناعة بسيطة: كل علامة ومؤسسة وفعالية في ليبيا تستحق صورة بمستوى عالمي. اليوم تمتد أعمالنا من الأفلام الوثائقية إلى تغطية الحملات الكاملة.">Al Soura — "The Picture" — began with a single camera and a simple conviction: every brand, institution, and event in Libya deserves world-class visuals. Today our productions run from documentary film to full campaign coverage.</p>
+      <h2 class="text-2xl font-black text-white mt-10" data-en="Our mission" data-ar="رسالتنا">Our mission</h2>
+      <p class="mt-4 text-slate-400 leading-relaxed" data-en="To raise the visual standard — one frame at a time." data-ar="أن نرفع سقف المعيار البصري — لقطةً بعد لقطة.">To raise the visual standard — one frame at a time.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-5">
+      <div class="rounded-2xl bg-ink-800 border border-white/5 p-6 text-center"><p class="text-4xl font-black grad-text">350+</p><p class="mt-2 text-sm text-slate-400" data-en="Productions" data-ar="إنتاج">Productions</p></div>
+      <div class="rounded-2xl bg-ink-800 border border-white/5 p-6 text-center"><p class="text-4xl font-black grad-text">4K</p><p class="mt-2 text-sm text-slate-400" data-en="Cinema-grade gear" data-ar="معدات سينمائية">Cinema-grade gear</p></div>
+      <div class="rounded-2xl bg-ink-800 border border-white/5 p-6 text-center"><p class="text-4xl font-black grad-text">18</p><p class="mt-2 text-sm text-slate-400" data-en="Crew members" data-ar="عضو فريق">Crew members</p></div>
+      <div class="rounded-2xl bg-ink-800 border border-white/5 p-6 text-center"><p class="text-4xl font-black grad-text">9</p><p class="mt-2 text-sm text-slate-400" data-en="Cities covered" data-ar="مدن مغطاة">Cities covered</p></div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
+    <h2 class="text-2xl font-black text-white mb-8" data-en="Capabilities" data-ar="قدراتنا">Capabilities</h2>
+    <div class="flex flex-wrap gap-3" id="capChips"></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section data-page="services">
+  <div class="border-b border-white/5 bg-ink-900"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+    <h1 class="text-4xl font-black text-white" data-en="Services" data-ar="خدماتنا">Services</h1>
+    <p class="mt-3 text-slate-400 max-w-2xl" data-en="From a single shoot day to a year-round content partnership." data-ar="من يوم تصوير واحد إلى شراكة محتوى على مدار العام.">From a single shoot day to a year-round content partnership.</p>
+  </div></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="svcCards2"></div>
+    <h2 class="text-2xl font-black text-white text-center mt-20 mb-10" data-en="Our process" data-ar="منهجيتنا">Our process</h2>
+    <div class="grid sm:grid-cols-4 gap-6 text-center">
+      <div><div class="w-12 h-12 mx-auto rounded-full bg-flame-500 text-ink-950 grid place-items-center font-black">1</div><h3 class="mt-4 font-bold text-white" data-en="Brief" data-ar="الفكرة">Brief</h3><p class="mt-1 text-sm text-slate-500" data-en="Concept & storyboard" data-ar="التصور واللوحة القصصية">Concept & storyboard</p></div>
+      <div><div class="w-12 h-12 mx-auto rounded-full bg-flame-500 text-ink-950 grid place-items-center font-black">2</div><h3 class="mt-4 font-bold text-white" data-en="Shoot" data-ar="التصوير">Shoot</h3><p class="mt-1 text-sm text-slate-500" data-en="On-location production" data-ar="إنتاج ميداني">On-location production</p></div>
+      <div><div class="w-12 h-12 mx-auto rounded-full bg-flame-500 text-ink-950 grid place-items-center font-black">3</div><h3 class="mt-4 font-bold text-white" data-en="Post" data-ar="المونتاج">Post</h3><p class="mt-1 text-sm text-slate-500" data-en="Edit, color, sound" data-ar="مونتاج وألوان وصوت">Edit, color, sound</p></div>
+      <div><div class="w-12 h-12 mx-auto rounded-full bg-flame-500 text-ink-950 grid place-items-center font-black">4</div><h3 class="mt-4 font-bold text-white" data-en="Launch" data-ar="الإطلاق">Launch</h3><p class="mt-1 text-sm text-slate-500" data-en="Delivery & distribution" data-ar="تسليم ونشر">Delivery & distribution</p></div>
+    </div>
+    <div class="text-center mt-16"><a href="#/contact" class="inline-block bg-flame-500 hover:bg-flame-600 text-ink-950 font-black px-8 py-3.5 rounded-lg" data-en="Request a quote" data-ar="اطلب عرض سعر">Request a quote</a></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section data-page="contact">
+  <div class="border-b border-white/5 bg-ink-900"><div class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+    <h1 class="text-4xl font-black text-white" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h1>
+    <p class="mt-3 text-slate-400 max-w-2xl" data-en="Tell us about the shoot — we'll bring the vision." data-ar="أخبرنا عن التصوير — ونحن نجلب الرؤية.">Tell us about the shoot — we'll bring the vision.</p>
+  </div></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-5 gap-10">
+    <form class="lg:col-span-3 space-y-5" onsubmit="return demoSubmit(this)">
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label class="text-sm font-semibold text-slate-300" data-en="Full name" data-ar="الاسم الكامل">Full name</label><input required class="mt-1.5 w-full rounded-lg bg-ink-800 border border-white/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-flame-500"></div>
+        <div><label class="text-sm font-semibold text-slate-300" data-en="Email or phone" data-ar="البريد أو الهاتف">Email or phone</label><input required class="mt-1.5 w-full rounded-lg bg-ink-800 border border-white/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-flame-500"></div>
+      </div>
+      <div><label class="text-sm font-semibold text-slate-300" data-en="Project type" data-ar="نوع المشروع">Project type</label>
+        <select class="mt-1.5 w-full rounded-lg bg-ink-800 border border-white/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-flame-500">
+          <option data-en="Video production" data-ar="إنتاج فيديو">Video production</option>
+          <option data-en="Photography" data-ar="تصوير فوتوغرافي">Photography</option>
+          <option data-en="Brand design" data-ar="تصميم هوية">Brand design</option>
+          <option data-en="Social media" data-ar="سوشيال ميديا">Social media</option>
+        </select></div>
+      <div><label class="text-sm font-semibold text-slate-300" data-en="Tell us more" data-ar="أخبرنا المزيد">Tell us more</label><textarea rows="5" required class="mt-1.5 w-full rounded-lg bg-ink-800 border border-white/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-flame-500"></textarea></div>
+      <button class="bg-flame-500 hover:bg-flame-600 text-ink-950 font-black px-8 py-3.5 rounded-lg" data-en="Send request" data-ar="أرسل الطلب">Send request</button>
+      <p class="hidden text-emerald-400 bg-emerald-950/60 border border-emerald-800 rounded-lg px-4 py-3 text-sm font-medium formOk" data-en="✓ Received — we'll get back to you shortly. (Demo)" data-ar="✓ تم الاستلام — سنعاود التواصل قريباً. (نسخة تجريبية)">✓ Received — we'll get back to you shortly. (Demo)</p>
+    </form>
+    <div class="lg:col-span-2 space-y-5">
+      <div class="rounded-2xl bg-ink-800 border border-white/5 p-6"><h3 class="font-bold text-white" data-en="Studio" data-ar="الاستوديو">Studio</h3><p class="mt-2 text-sm text-slate-400" data-en="Tripoli, Libya" data-ar="طرابلس، ليبيا">Tripoli, Libya</p></div>
+      <div class="rounded-2xl bg-ink-800 border border-white/5 p-6"><h3 class="font-bold text-white" data-en="Email & Phone" data-ar="البريد والهاتف">Email & Phone</h3><p class="mt-2 text-sm text-slate-400">hello@alsoura.ly<br>+218 91 000 0000</p></div>
+      <div class="rounded-2xl bg-ink-800 h-44 grid place-items-center text-slate-600 text-sm font-medium" data-en="[ Interactive map ]" data-ar="[ خريطة تفاعلية ]">[ Interactive map ]</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid sm:grid-cols-3 gap-8 text-sm">
+    <div>
+      <p class="font-black text-white text-lg">AL SOURA</p>
+      <p class="mt-2 text-slate-500" data-en="Full-service media production, Libya." data-ar="إنتاج إعلامي متكامل، ليبيا.">Full-service media production, Libya.</p>
+    </div>
+    <div>
+      <p class="font-bold text-white mb-3" data-en="Pages" data-ar="الصفحات">Pages</p>
+      <div class="space-y-1.5 text-slate-400">
+        <a class="block hover:text-flame-400" href="#/home" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a class="block hover:text-flame-400" href="#/about" data-en="About Us" data-ar="من نحن">About Us</a>
+        <a class="block hover:text-flame-400" href="#/services" data-en="Services" data-ar="خدماتنا">Services</a>
+        <a class="block hover:text-flame-400" href="#/contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+      </div>
+    </div>
+    <div>
+      <p class="font-bold text-white mb-3" data-en="Contact" data-ar="تواصل">Contact</p>
+      <p class="text-slate-400">hello@alsoura.ly</p><p class="text-slate-400">+218 91 000 0000</p>
+    </div>
+  </div>
+  <div class="border-t border-white/5 text-center text-xs text-slate-600 py-4">© <span id="yr"></span> Al Soura Media Services — <span data-en="Demo preview with placeholder content" data-ar="نسخة تجريبية بمحتوى مؤقت">Demo preview with placeholder content</span></div>
+</footer>
+
+<script>
+const services = [
+  {en:['Video Production','Commercials, documentaries, event films, and aerial footage.'], ar:['إنتاج الفيديو','إعلانات وأفلام وثائقية وتغطية فعاليات وتصوير جوي.'], icon:'M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z'},
+  {en:['Photography','Corporate, product, food, and editorial photography.'], ar:['التصوير الفوتوغرافي','تصوير مؤسسي ومنتجات وأطعمة وتحريري.'], icon:'M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9zm12 3a3 3 0 11-6 0 3 3 0 016 0z'},
+  {en:['Brand Design','Logos, identities, and campaign visuals that stick.'], ar:['تصميم الهوية','شعارات وهويات بصرية ومواد حملات راسخة.'], icon:'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485'},
+  {en:['Social Media','Always-on content calendars, reels, and channel management.'], ar:['السوشيال ميديا','خطط محتوى مستمرة وريلز وإدارة قنوات.'], icon:'M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z'},
+];
+const works = [
+  {en:['National Tourism Film','Documentary · 12 min'], ar:['فيلم السياحة الوطني','وثائقي · ١٢ دقيقة'], a:'#78350f', b:'#f59e0b'},
+  {en:['MedGate Launch','Commercial · 60 sec'], ar:['إطلاق ميدغيت','إعلان · ٦٠ ثانية'], a:'#7c2d12', b:'#fb923c'},
+  {en:['Saraya Fashion','Photography · Editorial'], ar:['أزياء سرايا','تصوير · تحريري'], a:'#431407', b:'#ea580c'},
+  {en:['Zuwara Festival','Event coverage · 3 days'], ar:['مهرجان زوارة','تغطية فعالية · ٣ أيام'], a:'#57534e', b:'#fbbf24'},
+  {en:['Atlas Bank Rebrand','Brand film · 90 sec'], ar:['هوية مصرف أطلس','فيلم هوية · ٩٠ ثانية'], a:'#292524', b:'#f97316'},
+  {en:['NovaTV Idents','Motion design · Series'], ar:['فواصل نوفا تي في','موشن جرافيك · سلسلة'], a:'#7c2d12', b:'#facc15'},
+];
+const caps = [
+  {en:'4K & 6K Cinema Cameras', ar:'كاميرات سينمائية 4K و6K'},{en:'Drone / Aerial Unit', ar:'وحدة تصوير جوي'},
+  {en:'Full Lighting Rig', ar:'منظومة إضاءة كاملة'},{en:'Color Grading Suite', ar:'استوديو تصحيح ألوان'},
+  {en:'Sound Design', ar:'هندسة صوت'},{en:'Motion Graphics', ar:'موشن جرافيك'},
+  {en:'Studio Space', ar:'استوديو تصوير'},{en:'Live Streaming', ar:'بث مباشر'},
+];
+function svcCard(s, lang){
+  const [t,d]=s[lang];
+  return `<div class="rounded-2xl bg-ink-800 border border-white/5 p-7 hover:border-flame-500/40 transition group">
+    <div class="w-11 h-11 rounded-lg bg-flame-500/10 text-flame-400 grid place-items-center group-hover:bg-flame-500 group-hover:text-ink-950 transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="${s.icon}"/></svg>
+    </div>
+    <h3 class="mt-5 font-bold text-lg text-white">${t}</h3>
+    <p class="mt-2 text-sm text-slate-400 leading-relaxed">${d}</p>
+  </div>`;
+}
+function workCard(w, lang){
+  const [t,m]=w[lang];
+  return `<div class="tile rounded-2xl aspect-[4/3] p-6 flex flex-col justify-end relative overflow-hidden group cursor-pointer" style="--a:${w.a};--b:${w.b}">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+    <div class="relative">
+      <h3 class="font-black text-white text-lg leading-snug">${t}</h3>
+      <p class="text-xs text-white/70 mt-1">${m}</p>
+    </div>
+    <span class="absolute top-5 end-5 w-9 h-9 rounded-full bg-white/15 backdrop-blur grid place-items-center opacity-0 group-hover:opacity-100 transition">
+      <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </span>
+  </div>`;
+}
+let lang='en';
+function renderDynamic(){
+  const s=services.map(x=>svcCard(x,lang)).join('');
+  document.getElementById('svcCards').innerHTML=s;
+  document.getElementById('svcCards2').innerHTML=s;
+  document.getElementById('workGrid').innerHTML=works.map(x=>workCard(x,lang)).join('');
+  document.getElementById('capChips').innerHTML=caps.map(c=>`<span class="text-sm font-semibold bg-ink-800 border border-white/10 rounded-full px-4 py-2">${c[lang]}</span>`).join('');
+}
+function toggleLang(){
+  lang = lang==='en'?'ar':'en';
+  document.documentElement.lang=lang;
+  document.documentElement.dir = lang==='ar'?'rtl':'ltr';
+  document.getElementById('langBtn').textContent = lang==='en'?'العربية':'English';
+  document.querySelectorAll('[data-en]').forEach(el=>{ el.textContent=el.dataset[lang]; });
+  renderDynamic();
+}
+function route(){
+  const page=(location.hash.replace('#/','')||'home').split('?')[0];
+  document.querySelectorAll('[data-page]').forEach(s=>{
+    s.classList.toggle('active', s.dataset.page===page);
+    if(s.dataset.page===page){ s.classList.remove('fade-in'); void s.offsetWidth; s.classList.add('fade-in'); }
+  });
+  document.querySelectorAll('[data-nav]').forEach(a=>{
+    a.classList.toggle('text-flame-400', a.dataset.nav===page);
+    a.classList.toggle('font-bold', a.dataset.nav===page);
+  });
+  document.getElementById('mnav').classList.add('hidden');
+  window.scrollTo({top:0});
+}
+function demoSubmit(f){ f.querySelector('.formOk').classList.remove('hidden'); return false; }
+window.addEventListener('hashchange', route);
+document.getElementById('yr').textContent=new Date().getFullYear();
+renderDynamic(); route();
+</script>
+</body>
+</html>
