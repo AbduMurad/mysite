@@ -1,7 +1,7 @@
 export const site = {
   name: "Abdu Murad",
   domain: "https://abdumurad.com",
-  email: "abadeem@gmail.com",
+  email: "hi@abdumurad.com",
   github: "https://github.com/AbduMurad",
   linkedin: "https://www.linkedin.com/in/murad-abdu/",
 } as const;
