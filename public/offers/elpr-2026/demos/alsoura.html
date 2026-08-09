@@ -27,6 +27,20 @@ tailwind.config = { theme: { extend: {
 </style>
 </head>
 <body class="bg-ink-950 text-slate-200 antialiased">
+<!-- proposal chrome: demo switcher — shows only when the demo is opened full,
+     never inside the offer page's device-frame iframes -->
+<div id="demo-switcher" hidden dir="ltr" class="bg-slate-950 border-b border-slate-800 text-slate-400">
+  <div class="max-w-6xl mx-auto px-4 min-h-[44px] py-1.5 flex flex-wrap items-center justify-between gap-2 text-sm">
+    <a href="../" class="hover:text-white whitespace-nowrap">&larr; Offer</a>
+    <nav class="flex items-center gap-1.5 flex-wrap">
+      <a href="elpr.html" class="px-3 py-1 rounded-full hover:text-white">EL PR &amp; Media</a>
+      <a href="alsoura.html" class="px-3 py-1 rounded-full bg-slate-800 text-white">Al Soura</a>
+      <a href="summit.html" class="px-3 py-1 rounded-full hover:text-white">Health Summit</a>
+    </nav>
+  </div>
+</div>
+<script>if(window.self===window.top)document.getElementById('demo-switcher').removeAttribute('hidden')</script>
+
 
 <header class="sticky top-0 z-40 bg-ink-950/85 backdrop-blur border-b border-white/5">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
