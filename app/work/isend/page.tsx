@@ -84,8 +84,8 @@ export default function Page() {
               <path className="edge" d="M640,160 L530,160" strokeDasharray="4 4" />
               <text className="dfaint" x={585} y={180} textAnchor="middle">status, polled</text>
               <rect className="node" x={640} y={106} width={180} height={80} rx={8} />
-              <text className="dlabel" x={730} y={140} textAnchor="middle">SMS gateway</text>
-              <text className="dfaint" x={730} y={162} textAnchor="middle">raw send + status API</text>
+              <text className="dlabel" x={730} y={140} textAnchor="middle">iSend gateway</text>
+              <text className="dfaint" x={730} y={162} textAnchor="middle">isend.ly — third-party API</text>
               <text className="dfaint" x={95} y={260}>
                 The gateway knows messages. The platform knows users, budgets, history, and accountability.
               </text>
@@ -101,7 +101,9 @@ export default function Page() {
             A raw SMS gateway understands one sentence: send this text to these
             numbers. Everything an organization actually needs around that —
             accounts, budgets, history, accountability — doesn&apos;t exist.
-            This platform supplies all of it.
+            This platform supplies all of it on top of iSend (isend.ly), a
+            third-party Libyan SMS provider — integrated purely through its
+            public API.
           </p>
         </Reveal>
       </section>

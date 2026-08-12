@@ -94,8 +94,7 @@ export default function Page() {
               </p>
               <p>
                 Built for a prospective client; the engagement didn&apos;t
-                proceed. The demos stay — brands fictionalized, pricing removed
-                — because the build is the point: this is what a proposal looks
+                proceed. The demos stay because the build is the point: this is what a proposal looks
                 like when an engineer makes it.
               </p>
             </div>
