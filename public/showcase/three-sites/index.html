@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>Website Development Proposal — EL PR Group</title>
+<title>Three-Site Showcase — Abdu Murad</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -32,26 +31,26 @@ tailwind.config = { theme: { extend: {
         <p class="text-[10px] uppercase tracking-widest text-slate-500">Software Engineering</p>
       </div>
     </div>
-    <a href="#download" class="text-sm font-bold text-brand-400 hover:text-brand-500">Download Proposal ↓</a>
+    <a href="https://abdumurad.com" class="text-sm font-bold text-brand-400 hover:text-brand-500">abdumurad.com →</a>
   </div>
 </header>
 
 <!-- Hero -->
 <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-10 text-center">
-  <p class="text-xs font-bold uppercase tracking-[0.25em] text-brand-400 mb-5">Website Development Proposal</p>
+  <p class="text-xs font-bold uppercase tracking-[0.25em] text-brand-400 mb-5">Spec build · Showcase</p>
   <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight max-w-3xl mx-auto leading-tight">Three websites, one standard of quality</h1>
-  <p class="mt-5 text-slate-400 max-w-2xl mx-auto">Prepared for <span class="text-white font-semibold">EL PR & Media Consultancy · Al Soura Media Services · Health Summit</span>.
+  <p class="mt-5 text-slate-400 max-w-2xl mx-auto">A three-site spec build — a PR consultancy, a media production house, and a health summit with a working registration flow. <span class="text-white font-semibold">All brands fictional.</span>
   Below are live, interactive previews of what each website can look like — switch devices, switch languages, try the registration flow.</p>
-  <p class="mt-3 text-xs text-slate-500">August 2026 · Offer valid 30 days · All content shown is placeholder</p>
+  <p class="mt-3 text-xs text-slate-500">August 2026 · spec build · all content is placeholder</p>
 </section>
 
 <!-- Demo viewer -->
 <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
   <!-- Site tabs -->
   <div class="flex flex-wrap justify-center gap-3 mb-6" id="siteTabs">
-    <button data-site="elpr" class="siteTab px-5 py-2.5 rounded-full text-sm font-bold">EL PR & Media</button>
-    <button data-site="alsoura" class="siteTab px-5 py-2.5 rounded-full text-sm font-bold">Al Soura</button>
-    <button data-site="summit" class="siteTab px-5 py-2.5 rounded-full text-sm font-bold">Health Summit</button>
+    <button data-site="meridian" class="siteTab px-5 py-2.5 rounded-full text-sm font-bold">Meridian PR</button>
+    <button data-site="frameline" class="siteTab px-5 py-2.5 rounded-full text-sm font-bold">Frameline</button>
+    <button data-site="summit" class="siteTab px-5 py-2.5 rounded-full text-sm font-bold">Horizon Summit</button>
   </div>
   <!-- Device toggles -->
   <div class="flex justify-center gap-2 mb-8" id="devTabs">
@@ -74,12 +73,12 @@ tailwind.config = { theme: { extend: {
           <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-amber-400/70"></span>
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-400/70"></span>
-          <span id="urlBar" class="ms-3 flex-1 bg-night-950 rounded-md text-[11px] text-slate-500 px-3 py-1 truncate">elprmedia.co.uk — preview</span>
-          <a id="openFull" href="demos/elpr.html" target="_blank" class="text-[11px] font-bold text-brand-400 hover:text-brand-500 shrink-0 px-2">Open full ↗</a>
+          <span id="urlBar" class="ms-3 flex-1 bg-night-950 rounded-md text-[11px] text-slate-500 px-3 py-1 truncate">meridianpr.example — preview</span>
+          <a id="openFull" href="demos/meridian.html" target="_blank" class="text-[11px] font-bold text-brand-400 hover:text-brand-500 shrink-0 px-2">Open full ↗</a>
         </div>
         <div id="viewport" class="relative overflow-hidden rounded-xl bg-white mx-auto">
-          <iframe id="ifr-elpr" class="absolute top-0 left-0 origin-top-left border-0" title="EL PR demo"></iframe>
-          <iframe id="ifr-alsoura" class="absolute top-0 left-0 origin-top-left border-0 hidden" title="Al Soura demo"></iframe>
+          <iframe id="ifr-meridian" class="absolute top-0 left-0 origin-top-left border-0" title="Meridian PR demo"></iframe>
+          <iframe id="ifr-frameline" class="absolute top-0 left-0 origin-top-left border-0 hidden" title="Frameline demo"></iframe>
           <iframe id="ifr-summit" class="absolute top-0 left-0 origin-top-left border-0 hidden" title="Summit demo"></iframe>
         </div>
       </div>
@@ -91,60 +90,14 @@ tailwind.config = { theme: { extend: {
 </section>
 
 <!-- Pricing -->
-<section class="border-t border-white/5 bg-night-900">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
-    <h2 class="text-3xl font-black text-white text-center">Investment</h2>
-    <p class="text-center text-slate-400 mt-3 mb-12">Two options — full details in the proposal document below.</p>
-    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      <div class="rounded-2xl border border-white/10 bg-night-800 p-8">
-        <p class="text-xs font-bold uppercase tracking-widest text-slate-400">Standard</p>
-        <p class="mt-3 text-4xl font-black text-white">30,000 <span class="text-lg font-bold text-slate-400">LYD</span></p>
-        <ul class="mt-6 space-y-2.5 text-sm text-slate-300">
-          <li>✓ Three bilingual (AR/EN) websites, four pages each</li>
-          <li>✓ Summit registration form + admin dashboard with CSV export</li>
-          <li>✓ 3 months support & maintenance included</li>
-          <li>✓ SSL, analytics, anti-spam, deployment included</li>
-        </ul>
-      </div>
-      <div class="rounded-2xl border-2 border-brand-500 bg-night-800 p-8 relative">
-        <span class="absolute -top-3 start-6 bg-brand-500 text-night-950 text-[11px] font-black uppercase tracking-wider rounded-full px-3 py-1">+ Content editing</span>
-        <p class="text-xs font-bold uppercase tracking-widest text-brand-400">With CMS</p>
-        <p class="mt-3 text-4xl font-black text-white">35,000 <span class="text-lg font-bold text-slate-400">LYD</span></p>
-        <ul class="mt-6 space-y-2.5 text-sm text-slate-300">
-          <li>✓ Everything in Standard</li>
-          <li>✓ Independent CMS per website — edit texts, images, speakers, agenda & sponsors in the browser</li>
-          <li>✓ Changes live within minutes, no developer needed</li>
-          <li>✓ Also available per site (e.g., Summit only)</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Download -->
-<section id="download" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 text-center">
-  <h2 class="text-3xl font-black text-white">The full proposal</h2>
-  <p class="mt-3 text-slate-400 max-w-xl mx-auto">Complete scope, page structures, timeline, payment terms, and hosting details.</p>
-  <div class="mt-8 flex flex-wrap justify-center gap-4">
-    <a href="Website-Development-Proposal-Aug2026.pdf" download class="bg-brand-500 hover:bg-brand-600 text-night-950 font-black px-8 py-4 rounded-lg">Download PDF</a>
-    <a href="Website-Development-Proposal-Aug2026.docx" download class="border border-white/15 hover:border-brand-400 hover:text-brand-400 font-bold px-8 py-4 rounded-lg">Download Word (.docx)</a>
-  </div>
-  <div class="mt-16 rounded-2xl border border-white/10 bg-night-900 max-w-2xl mx-auto p-8">
-    <h3 class="font-black text-white text-lg">Questions? Let's talk.</h3>
-    <p class="mt-2 text-sm text-slate-400">Abdu Murad · hi@abdumurad.com</p>
-    <p class="mt-1 text-sm text-slate-500">Reply on WhatsApp or email — I'll walk you through everything.</p>
-  </div>
-  <p class="mt-12 text-xs text-slate-600">Demos contain placeholder content and dates. Final designs are refined together with you during the design phase.</p>
-</section>
-
 <script>
 const sites = {
-  elpr:    { src:'demos/elpr.html',    url:'elprmedia.co.uk — preview',    feats:['4 pages','Arabic + English (RTL)','Corporate consultancy design','Contact form'] },
-  alsoura: { src:'demos/alsoura.html', url:'alsoura.ly — preview',         feats:['4 pages','Arabic + English (RTL)','Dark production-house design','Portfolio & showreel'] },
-  summit:  { src:'demos/summit.html',  url:'healthsummit.ly — preview',    feats:['4 pages','Speakers · Agenda · Sponsors','Working registration demo','Arabic + English (RTL)'] },
+  meridian:    { src:'demos/meridian.html',    url:'meridianpr.example — preview',    feats:['4 pages','Arabic + English (RTL)','Corporate consultancy design','Contact form'] },
+  frameline: { src:'demos/frameline.html', url:'frameline.example — preview',         feats:['4 pages','Arabic + English (RTL)','Dark production-house design','Portfolio & showreel'] },
+  summit:  { src:'demos/summit.html',  url:'horizonsummit.example — preview',    feats:['4 pages','Speakers · Agenda · Sponsors','Working registration demo','Arabic + English (RTL)'] },
 };
 const devices = { desktop:{w:1440,h:900,max:1100,r:'12px'}, tablet:{w:834,h:1112,max:560,r:'24px'}, mobile:{w:390,h:844,max:300,r:'28px'} };
-let curSite='elpr', curDev='desktop';
+let curSite='meridian', curDev='desktop';
 const loaded = {};
 
 function applyTabs(){
@@ -163,7 +116,7 @@ function render(){
   // lazy-load iframe
   const ifr = document.getElementById('ifr-'+curSite);
   if(!loaded[curSite]){ ifr.src = s.src; loaded[curSite]=true; }
-  ['elpr','alsoura','summit'].forEach(k=>document.getElementById('ifr-'+k).classList.toggle('hidden', k!==curSite));
+  ['meridian','frameline','summit'].forEach(k=>document.getElementById('ifr-'+k).classList.toggle('hidden', k!==curSite));
   // shell width
   const shell = document.getElementById('frameShell');
   shell.style.maxWidth = (d.max + 40) + 'px';
@@ -176,7 +129,7 @@ function render(){
   vp.style.borderRadius = d.r;
   ifr.style.width = d.w+'px'; ifr.style.height = d.h+'px';
   ifr.style.transform = 'scale('+scale+')';
-  ['elpr','alsoura','summit'].forEach(k=>{
+  ['meridian','frameline','summit'].forEach(k=>{
     const f = document.getElementById('ifr-'+k);
     f.style.width=d.w+'px'; f.style.height=d.h+'px'; f.style.transform='scale('+scale+')';
   });

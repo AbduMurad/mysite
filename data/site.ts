@@ -90,6 +90,28 @@ export const projects: ProjectMeta[] = [
     live: true,
     kind: "Employment project",
   },
+  {
+    order: 7,
+    slug: "isend",
+    title: "iSend SMS Platform",
+    short: "iSend SMS Platform",
+    tagline: "Self-hosted, multi-user SMS sending with quotas, 2FA, and an audit trail.",
+    accent: "#C9A46A",
+    accentMuted: A("#C9A46A"),
+    live: true,
+    kind: "Employment — built within the current role",
+  },
+  {
+    order: 8,
+    slug: "three-sites",
+    title: "Three-Site Showcase",
+    short: "Three-Site Showcase",
+    tagline: "Three bilingual site demos — a PR firm, a media studio, and a summit with a working registration flow.",
+    accent: "#C9A46A",
+    accentMuted: A("#C9A46A"),
+    live: false,
+    kind: "Spec build · August 2026",
+  },
 ];
 
 export const bySlug = (slug: string) =>

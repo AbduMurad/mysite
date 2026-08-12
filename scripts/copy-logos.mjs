@@ -13,7 +13,7 @@ const slugs = [
   "nestjs", "typescript", "natsdotio", "kubernetes", "helm", "docker",
   "mongodb", "redis", "angular", "react", "nextdotjs", "minio",
   "proxmox", "n8n", "asterisk", "frappe", "googlegemini", "prisma",
-  "mysql", "nginx", "linux", "googlecloud", "amazons3",
+  "mysql", "nginx", "linux", "googlecloud", "amazons3", "tailwindcss", "html5", "javascript",
 ];
 
 mkdirSync(dst, { recursive: true });

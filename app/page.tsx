@@ -112,6 +112,41 @@ const cards: CardData[] = [
       { slug: "docker", title: "Docker" },
     ],
   },
+  {
+    idx: "07",
+    slug: "isend",
+    title: "iSend SMS Platform",
+    blurb:
+      "Self-hosted, multi-user SMS sending with quotas, 2FA, and an audit trail.",
+    meta: "Sole developer · 2026",
+    chips: ["Next.js", "React", "Prisma", "NextAuth", "+4"],
+    status: "In production — 2026",
+    live: true,
+    metric: { n: "2FA", cap: "gated sending — quotas, ledger, audit" },
+    fan: [
+      { slug: "nextdotjs", title: "Next.js" },
+      { slug: "react", title: "React" },
+      { slug: "prisma", title: "Prisma" },
+      { slug: "tailwindcss", title: "Tailwind CSS" },
+    ],
+  },
+  {
+    idx: "08",
+    slug: "three-sites",
+    title: "Three-Site Showcase",
+    blurb:
+      "Three bilingual site demos — a PR firm, a media studio, and a summit with a working registration flow.",
+    meta: "Spec build · August 2026",
+    chips: ["Tailwind", "AR/EN · RTL", "Device frames", "+2"],
+    status: "Spec build — demos live",
+    live: false,
+    metric: { n: "×3", cap: "site demos, bilingual, one viewer" },
+    fan: [
+      { slug: "html5", title: "HTML5" },
+      { slug: "tailwindcss", title: "Tailwind CSS" },
+      { slug: "javascript", title: "JavaScript" },
+    ],
+  },
 ];
 
 export default function Home() {
@@ -158,7 +193,7 @@ export default function Home() {
       <section className="section" id="work">
         <div className="wrap">
           <Reveal className="section-head">
-            <p className="eyebrow">Work · 01–06</p>
+            <p className="eyebrow">Work · 01–08</p>
             <h2>Selected work</h2>
           </Reveal>
           <div className="grid">

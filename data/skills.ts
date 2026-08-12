@@ -28,6 +28,7 @@ export const domains: Domain[] = [
         name: "TypeScript",
         evidence: [
           { slug: "isms", note: "end to end" },
+          { slug: "isend", note: "end to end" },
           { slug: "v1-v2", note: "both generations" },
           { slug: "pipeline", note: "service + shared contracts" },
           { slug: "proposal", note: "API + prompt pipeline" },
@@ -72,6 +73,7 @@ export const domains: Domain[] = [
       {
         name: "React / Next.js",
         evidence: [
+          { slug: "isend", note: "the whole platform (App Router)" },
           { slug: "v1-v2", note: "the v1 client (Next.js)" },
         ],
       },
@@ -136,6 +138,12 @@ export const domains: Domain[] = [
         ],
       },
       {
+        name: "Prisma + SQLite",
+        evidence: [
+          { slug: "isend", note: "transactional batch + quota ledger" },
+        ],
+      },
+      {
         name: "MySQL",
         evidence: [{ slug: "attendance", note: "the system of record" }],
       },
@@ -169,6 +177,12 @@ export const domains: Domain[] = [
         name: "ISO 27001 domain knowledge",
         evidence: [
           { slug: "isms", note: "the platform's whole subject" },
+        ],
+      },
+      {
+        name: "Auth, 2FA & audit trails",
+        evidence: [
+          { slug: "isend", note: "NextAuth v5, TOTP, immutable audit log" },
         ],
       },
       {
