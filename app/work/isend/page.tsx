@@ -98,10 +98,11 @@ export default function Page() {
       <section className="section">
         <Reveal className="prose wrap">
           <p style={{ fontSize: "var(--text-lg)" }}>
-            A raw SMS gateway does one thing: send this text to these numbers.
-            It has no concept of users, quotas, or history. This platform adds
-            that layer on top of iSend (isend.ly), a third-party Libyan SMS
-            provider, using only its public API.
+            The organization sends SMS through iSend (isend.ly), a third-party
+            Libyan provider. This platform is the layer the team actually
+            uses: accounts with 2FA, per-user quotas, batch history, and live
+            delivery status for every message — self-hosted, talking to the
+            provider through its public API alone.
           </p>
         </Reveal>
       </section>
