@@ -87,7 +87,7 @@ export default function Page() {
               <text className="dlabel" x={730} y={140} textAnchor="middle">iSend gateway</text>
               <text className="dfaint" x={730} y={162} textAnchor="middle">isend.ly — third-party API</text>
               <text className="dfaint" x={95} y={260}>
-                The gateway knows messages. The platform knows users, budgets, history, and accountability.
+                The gateway knows messages. The platform knows users, quotas, history, and accountability.
               </text>
             </svg>
           </Reveal>
@@ -117,15 +117,12 @@ export default function Page() {
           <Reveal>
             <div className="prose" style={{ marginInline: "auto" }}>
               <p>
-                <strong>
-                  The architecture treats every send as spending real money,
-                  because it is.
-                </strong>{" "}
-                Quota is reserved upfront inside the same transaction that
-                creates the batch and its per-recipient message rows — then
-                refunded per message or per chunk when the gateway rejects.
-                There is no state where money moved and the ledger
-                doesn&apos;t know.
+                <strong>Every send is accounted for before it happens.</strong>{" "}
+                Creating a batch reserves the user&apos;s message quota in the
+                same transaction that writes the per-recipient rows, and failed
+                messages refund automatically. Nobody sends past their
+                allowance, and every message traces back to a user, a batch,
+                and a delivery status.
               </p>
               <p>
                 Recipient lists arrive as raw paste, CSV, or XLSX; numbers are
@@ -159,7 +156,7 @@ export default function Page() {
               <p>
                 Paste a list, pick a message, send — and see exactly what
                 happened to every recipient, live. Administrators create users,
-                set their budgets, and read the full history of who sent what,
+                set their quotas, and read the full history of who sent what,
                 when. The organization owns the whole system on its own
                 infrastructure; no per-seat SaaS, no data leaving.
               </p>
