@@ -56,7 +56,7 @@ export default function Page() {
               sending gated by <b>TOTP 2FA</b>
             </span>
             <span>
-              quotas <b>reserved upfront, refunded on failure</b>
+              batch history with <b>live delivery status</b>
             </span>
             <span>
               every action <b>audit-logged</b>
