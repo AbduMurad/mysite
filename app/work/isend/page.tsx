@@ -164,6 +164,43 @@ export default function Page() {
         </div>
       </section>
 
+      {/* live-system captures — real, redacted */}
+      <section className="section">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <p className="eyebrow">Live-system captures</p>
+          </Reveal>
+          <Reveal as="figure" className="dframe" >
+            <div className="shotcol">
+              {[
+                ["isend-dashboard", "Dashboard — per-user sending stats and recent activity"],
+                ["isend-send", "Send — free-form recipients parsed, validated, and counted before anything leaves"],
+                ["isend-settings", "Settings — the kill-switch and the country-code normalization rule"],
+                ["isend-audit", "Audit log — append-only, from first bootstrap onward"],
+                ["isend-setup", "First run — the setup flow that bootstraps the super-admin"],
+              ].map(([img, cap]) => (
+                <figure key={img} className="shot">
+                  <img
+                    src={`/images/isend/${img}.webp`}
+                    alt={cap}
+                    loading="lazy"
+                  />
+                  <figcaption className="figcap">{cap}</figcaption>
+                </figure>
+              ))}
+            </div>
+            <figcaption className="figcap">
+              Captures from the running system — identifying details redacted.
+            </figcaption>
+          </Reveal>
+        </div>
+      </section>
+      <style>{`
+.shotcol{display:flex;flex-direction:column;gap:var(--space-6)}
+.shotcol .shot{margin:0}
+.shotcol img{border:1px solid var(--border);border-radius:10px;width:100%}
+      `}</style>
+
       <PrevNext slug="isend" />
     </main>
   );
