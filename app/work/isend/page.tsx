@@ -116,12 +116,13 @@ export default function Page() {
           <Reveal>
             <div className="prose" style={{ marginInline: "auto" }}>
               <p>
-                <strong>Every send is accounted for before it happens.</strong>{" "}
-                Creating a batch reserves the user&apos;s message quota in the
-                same transaction that writes the per-recipient rows, and failed
-                messages refund automatically. Nobody sends past their
-                allowance, and every message traces back to a user, a batch,
-                and a delivery status.
+                <strong>One path to the gateway.</strong> Route handlers never
+                call the provider directly — every send flows through a single
+                orchestration module, and every response passes through one
+                parser that normalizes the provider&apos;s inconsistent payload
+                shapes into a single type. The rest of the codebase never
+                branches on gateway quirks, and every message traces back to a
+                user, a batch, and a delivery status.
               </p>
               <p>
                 Recipient lists arrive as raw paste, CSV, or XLSX; numbers are
